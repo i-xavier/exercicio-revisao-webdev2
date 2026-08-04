@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -14,8 +13,8 @@ body {
 
 
 button {
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     align-items: center;
     border-radius: 40px;
     border: none;
@@ -28,7 +27,7 @@ button {
 
 
     &:hover {
-        opacity: 1;
+        opacity: 0.8;
     }
 
 
@@ -43,36 +42,41 @@ a {
 
 }
 
-p,
-a,
-h2,
-h3 {
-    font-family: "Roboto";
+p, a, h2, h3, h4, h5, h6, li, ul {
+    font-family: "Roboto", sans-serif;
 }
 
-header nav ul {
-    padding: 0;
-    list-style-type: none;
-    gap: 20px;
-    display: flex;
-    background-color: rgba(165, 42, 42, 0.8);
-    padding: 16px 20px;
-    border-radius: 12px;
-    backdrop-filter: blur(20px);
-    transition: all .2s;
+
+nav {
 
 
-    li a {
-        flex-grow: 1;
-        color: white;
-        font-family: "Kiwi Maru";
 
-        &:hover {
-            color: #DEA562;
+    
+    ul {
+        padding: 0;
+        list-style-type: none;
+        gap: 20px;
+        display: flex;
+        background-color: rgba(165, 42, 42, 0.8);
+        padding: 16px 20px;
+        /*largura da navbar*/
+        border-radius: 12px;
+        backdrop-filter: blur(20px);
+        transition: all .2s;
+
+
+        li a {
+            flex-grow: 1;
+            color: white;
+            font-family: "Kiwi Maru";
+
+            &:hover {
+                color: #DEA562;
+            }
+
         }
 
     }
-
 }
 
 
@@ -83,7 +87,7 @@ h1 {
 header {
     width: 100%;
     display: flex;
-    padding: 4%;
+    padding: 2% 4%;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -100,11 +104,11 @@ section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 4%;
+    padding: 8% 4% 4% 4%;
 }
 
 #home {
-    background-image: url(../imgs/programacao2.jpg);
+    background-image: url(../imgs/home.jpg);
     opacity: .9;
     background-size: cover;
     background-position: center;
@@ -154,8 +158,10 @@ section {
 .divConteudoSobre {
     display: flex;
     align-items: center;
-    gap: 100px;
+    justify-content: center;
+    gap: 50px;
     margin-top: 20px;
+    flex-wrap: wrap;
 
 
     .conteudoSobre p {
@@ -190,10 +196,12 @@ section {
     display: flex;
     gap: 20px;
     margin-top: 28px;
+    flex-wrap: wrap;
+    justify-content: center;
 
 
     button {
-        font-family: "Potta One";
+        font-family: "Potta One", cursive;
     }
 
     .btn_ingressos {
@@ -228,8 +236,18 @@ section {
     font-size: 70px;
     font-weight: bold;
     color: white;
-    font-family: "Kiwi Maru";
+    font-family: "Kiwi Maru", serif;
 
+}
+
+.tituloSecao::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #DEA562;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
 }
 
 #sobre,
@@ -385,6 +403,7 @@ section {
     padding-bottom: 10px;
     text-align: center;
     background-color: #F8F4EC;
+    object-fit: cover;
 
 
     img {
